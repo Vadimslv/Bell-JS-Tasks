@@ -1,0 +1,27 @@
+body {
+    background-color: white;
+}
+
+.border {
+	width: 500px;
+	height: 300px;
+	border: 4px ; 
+    background: #0F96BD; 
+    padding: 10px;
+
+}
+p {
+	color: white;
+}
+.container {
+    position: static;
+    height: 1px;
+    width: 500px;
+    background: white;
+}
+button {
+	background: #D89B18;
+}
+input {
+	max-width: 100%;
+}
