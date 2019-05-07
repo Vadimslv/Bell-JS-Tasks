@@ -1,3 +1,14 @@
+document.addEventListener( 'DOMContentLoaded', function () {
+var forwardButton = document.getElementById("forward");
+forwardButton.onclick = forward;
+var backButton = document.getElementById("back");
+backButton.onclick = back;
+var allToRightButton = document.getElementById("allToRight");
+allToRightButton.onclick = allToRight;
+var allToLeftButton = document.getElementById("allToLeft");
+allToLeftButton.onclick = allToLeft;
+}, false );
+
 function forward(){
 	var leftList = document.getElementById("leftNames");
 	var rightList = document.getElementById("rightNames")
@@ -33,7 +44,7 @@ function back(){
 
 }
 
-function alltoRight(){
+function allToRight(){
 var leftList = document.getElementById("leftNames");
 var rightList = document.getElementById("rightNames");
 var option = document.createElement("option");
@@ -47,7 +58,7 @@ for (var i = 0; i<options.length; i++){
   }
 }
 
-function alltoLeft(){
+function allToLeft(){
 var leftList = document.getElementById("leftNames");
 var rightList = document.getElementById("rightNames");
 var option = document.createElement("option");
