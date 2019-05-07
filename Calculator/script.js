@@ -1,3 +1,7 @@
+document.addEventListener( 'DOMContentLoaded', function () {
+var resultButton = document.getElementById("resultButton");
+resultButton.onclick = getResult;
+}, false );
 function getExp (input) {
     var input = input.replace(/\s+/g, ''); //Remove spaces 
     if (input[0] == "-") {
