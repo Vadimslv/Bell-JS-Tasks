@@ -45,11 +45,8 @@ function back(){
 }
 
 function allToRight(){
-var leftList = document.getElementById("leftNames");
 var rightList = document.getElementById("rightNames");
 var option = document.createElement("option");
-console.log(leftList.options);
-
 var options = document.querySelectorAll("#leftNames option");
 
 for (var i = 0; i<options.length; i++){

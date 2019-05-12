@@ -10,22 +10,17 @@ body {
     padding: 10px;
 
 }
+
 p {
 	color: black;
 	font-weight: bold;
 }
 
-button {
-	background: #D1E0D6;
-    
-
-}
-
 form {
 	width: 500px;
 	height: 500px;
-	
 }
+
 select{
 	padding:5px;
 	width: 100%;
@@ -41,5 +36,6 @@ button{
 	margin: 5px;
 	width: 30px;
 	height: 20px;
-	display: block;	
+	display: block;
+	background: #D1E0D6;	
 }
