@@ -14,8 +14,7 @@ var COUNT = 5; //Set countdown time
 var time, count;
 
 function Start (){  
-    Play();
-    Countdown();    
+    Play();    
 }
 
 function Display() {
@@ -38,7 +37,8 @@ function Stop() {
     
 function Play() {
     count = COUNT;
-    Display();
+    Stop();
+    Countdown();
 }
 
 function Forward() {
