@@ -1,20 +1,20 @@
 document.addEventListener( "DOMContentLoaded", function () {
 window.onload = Start;
 var nextPage = document.getElementById("forward");
-nextPage.onclick = Forward;
+    nextPage.onclick = Forward;
 var prevPage = document.getElementById("back");
-prevPage.onclick = Back;
+    prevPage.onclick = Back;
 var stop = document.getElementById("stop");
-stop.onclick = Stop;
+    stop.onclick = Stop;
 var play = document.getElementById("play");
-play.onclick = Play;
+    play.onclick = Play;
 window.onclick = closeModalWithoutButton; // If you click outside the modal window
 var close = document.getElementById("closeTab");
-close.onclick = closeTab;
+    close.onclick = closeTab;
 var repeat = document.getElementById("repeat");
-repeat.onclick = Repeat;
+    repeat.onclick = Repeat;
 var closeModal = document.getElementsByClassName("closeModal")[0];
-closeModal.onclick = closeModal;
+    closeModal.onclick = closeModal;
 }, false );
 
 var COUNT = 5; //Set countdown time   
