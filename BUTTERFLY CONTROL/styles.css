@@ -2,18 +2,16 @@ body {
     background-color: white;
 }
 
-.border {
-	width: 500px;
-	height: 300px;
-	border: 4px ; 
-    background: #B8EFC7;
-    padding: 10px;
-
+.Selected, .Available {
+	width: 100px;
+	height: 100px;
 }
+
 
 p {
 	color: black;
 	font-weight: bold;
+	display: inline-block;
 }
 
 form {
