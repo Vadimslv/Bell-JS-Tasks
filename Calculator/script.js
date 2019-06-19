@@ -26,13 +26,13 @@ function doOperations (numbers,operation){
 var result = numbers[0];
 for (var i = 0; i < operation.length; i ++){
     switch(operation[i]){
-        case '+': result = result + numbers[i+1]; 
+        case '+': result += numbers[i+1]; 
         break;
-        case '-': result = result - numbers[i+1]; 
+        case '-': result -= numbers[i+1]; 
         break;
-        case '*': result = result * numbers[i+1];
+        case '*': result *= numbers[i+1];
         break;
-        case '/': result = result / numbers[i+1]; 
+        case '/': result /= numbers[i+1]; 
         break;
         }
     }
@@ -44,9 +44,14 @@ function getResult() {
     var input = document.getElementById("expression").value;
     input = getExp(input);
     if (input.length != 0) {
-        var operators = getOperators(input);
-        var numbers = getNumbers(input);
-        document.getElementById("result").value = doOperations(numbers,operators);
+        if (input[input.length - 1] == "="){
+            var operators = getOperators(input);
+            var numbers = getNumbers(input);
+            document.getElementById("result").value = doOperations(numbers,operators);
+        }
+        else {
+            alert("Add = at the end of the expression");
+        }
     }
     else {
         alert ("You entered an empty field");

@@ -50,12 +50,12 @@ function Play() {
 
 function Forward() {
     Stop();
-    window.open("../Page4/index.html");
+    window.open("../Page4/index.html","_self");
 }
 
 function Back() {
     Stop();
-    window.open("../Page2/index.html");
+    window.open("../Page2/index.html","_self");
 }
 
 function showModal() {

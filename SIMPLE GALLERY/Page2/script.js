@@ -24,7 +24,7 @@ function Display() {
 function Countdown() {
     Display();
         if (count == 0) {
-            window.open("../Page3/index.html");
+            window.open("../Page3/index.html","_self");
         } else {
             count--;
             time = setTimeout("Countdown()", 1000);
@@ -43,11 +43,11 @@ function Play() {
 
 function Forward() {
     Stop();
-    window.open("../Page3/index.html");
+    window.open("../Page3/index.html","_self");
 }
 
 function Back() {
     Stop();
-    window.open("../Page1/index.html");
+    window.open("../Page1/index.html","_self");
 }
 
