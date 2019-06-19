@@ -7,7 +7,7 @@ var allToRightButton = document.getElementById("allToRight");
 allToRightButton.onclick = allToRight;
 var allToLeftButton = document.getElementById("allToLeft");
 allToLeftButton.onclick = allToLeft;
-}, false );
+});
 
 function forward(){
 	var leftList = document.getElementById("leftNames");

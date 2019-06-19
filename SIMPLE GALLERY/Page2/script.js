@@ -8,7 +8,7 @@ var stop = document.getElementById("stop");
 stop.onclick = Stop;
 var play = document.getElementById("play");
 play.onclick = Play;
-}, false );
+});
 
 var COUNT = 5; //Set countdown time   
 var time, count;

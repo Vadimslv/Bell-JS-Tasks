@@ -15,7 +15,7 @@ var repeat = document.getElementById("repeat");
     repeat.onclick = Repeat;
 var closeModal = document.getElementsByClassName("closeModal")[0];
     closeModal.onclick = closeModal;
-}, false );
+});
 
 var COUNT = 5; //Set countdown time   
 var time, count;

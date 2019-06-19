@@ -1,7 +1,7 @@
 document.addEventListener( "DOMContentLoaded", function () {
 var resultButton = document.getElementById("resultButton");
 resultButton.onclick = getResult;
-}, false );
+});
 function splitMulti(text, delims){
     
     var tempSymb = delims[0];
