@@ -1,7 +1,8 @@
 document.addEventListener( 'DOMContentLoaded', function () {
-var resultButton = document.getElementById("resultButton");
-resultButton.onclick = getResult;
+    var resultButton = document.getElementById("resultButton");
+    resultButton.onclick = getResult;
 });
+
 function getExp (input) {
     var input = input.replace(/\s+/g, ''); //Remove spaces 
     if (input[0] == "-") {
@@ -23,24 +24,23 @@ function getOperators (input) {
 }
 
 function doOperations (numbers,operation){
-var result = numbers[0];
-for (var i = 0; i < operation.length; i ++){
-    switch(operation[i]){
-        case '+': result += numbers[i+1]; 
-        break;
-        case '-': result -= numbers[i+1]; 
-        break;
-        case '*': result *= numbers[i+1];
-        break;
-        case '/': result /= numbers[i+1]; 
-        break;
+    var result = numbers[0];
+    for (var i = 0; i < operation.length; i ++){
+        switch(operation[i]){
+            case '+': result += numbers[i+1]; 
+            break;
+            case '-': result -= numbers[i+1]; 
+            break;
+            case '*': result *= numbers[i+1];
+            break;
+            case '/': result /= numbers[i+1]; 
+            break;
         }
     }
     return result;
 }
 
 function getResult() {
-
     var input = document.getElementById("expression").value;
     input = getExp(input);
     if (input.length != 0) {

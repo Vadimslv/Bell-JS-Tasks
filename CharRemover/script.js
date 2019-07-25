@@ -1,9 +1,9 @@
 document.addEventListener( "DOMContentLoaded", function () {
-var resultButton = document.getElementById("resultButton");
-resultButton.onclick = getResult;
+    var resultButton = document.getElementById("resultButton");
+    resultButton.onclick = getResult;
 });
+
 function splitMulti(text, delims){
-    
     var tempSymb = delims[0];
     for(var i = 1; i < delims.length; i++){
         text = text.split(delims[i]).join(tempSymb);
@@ -18,23 +18,18 @@ function getCharsToIgnore (text) {
 
     for (var i=0, len = splittedText.length; i < len; i++) {
         var word = splittedText[i];
-        
-        var charTable = {}
-
-
+        var charTable = {};
         for (var j=0, len2 = word.length; j < len2; j++) {
             if (charTable.hasOwnProperty(word[j])) {
                 charTable[word[j]]++
-                toIgnore[word[j]] = true
+                toIgnore[word[j]] = true;
             } else {
-                charTable[word[j]] = 1
+                charTable[word[j]] = 1;
             }
         }
     }
-
-    return toIgnore
+    return toIgnore;
 }
-
 
  function cleanChars (text) {
     var toIgnore = getCharsToIgnore(text);
@@ -48,11 +43,10 @@ function getCharsToIgnore (text) {
     return cleanedText
 }
 
-
 function getResult() {
-var inputText = document.getElementById("words").value;
+    var inputText = document.getElementById("words").value;
     if (inputText.length != 0) {
-    document.getElementById("result").value = cleanChars(inputText);
+        document.getElementById("result").value = cleanChars(inputText);
     }
     else { 
         alert ("You entered an empty field");

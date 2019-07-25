@@ -1,57 +1,52 @@
-document.addEventListener( 'DOMContentLoaded', function () {
-var forwardButton = document.getElementById("forward");
-forwardButton.onclick = toLeft;
-var backButton = document.getElementById("back");
-backButton.onclick = toRight;
-var allToRightButton = document.getElementById("allToRight");
-allToRightButton.onclick = allToRight;
-var allToLeftButton = document.getElementById("allToLeft");
-allToLeftButton.onclick = allToLeft;
+document.addEventListener ('DOMContentLoaded', function () {
+	var leftOptions = document.querySelectorAll("#leftNames option");
+	var rightOptions = document.querySelectorAll("#rightNames option");
+	var forwardButton = document.getElementById("forward");
+	var backButton = document.getElementById("back");
+	var leftList = document.getElementById("leftNames");
+	var rightList = document.getElementById("rightNames");
+
+	forwardButton.onclick = () => toMoveSelectedElements(leftList, rightList);
+	backButton.onclick = () => toMoveSelectedElements(rightList, leftList);
+
+	var allToRightButton = document.getElementById("allToRight");
+	allToRightButton.onclick = () => toMoveAllElements(leftOptions,rightOptions);
+	var allToLeftButton = document.getElementById("allToLeft");
+	allToLeftButton.onclick = () => toMoveAllElements(rightOptions,leftOptions);
 });
 
-function toLeft(){
-	var leftList = document.getElementById("leftNames");
-	var rightList = document.getElementById("rightNames")
+function toMoveSelectedElements(fromList, toList){
 	var option = document.createElement("option");
-	var selectedOption = leftList.options[leftList.selectedIndex];
-	
-	if (selectedOption == undefined){
+	var selectedOption = fromList.options[fromList.selectedIndex];
+	if (selectedOption === undefined){
 		alert("Choose an option");
 	}
 	else {
-		selectedOption.selected = false;
-    	option.text = selectedOption.text ;
-    	rightList.add(option);
-    	leftList.remove(option);
-		}
+		option.text = selectedOption.text;
+		fromList.remove(fromList.selectedIndex);
+  		toList.add(option); 
+	}
 }
 
-function toRight(){
-	var leftList = document.getElementById("leftNames");
-	var rightList = document.getElementById("rightNames")
+function toMoveAllElements(fromList, toList){
+	var options = fromList;
+	var selectedOption = fromList.options[fromList.selectedIndex];
+	for (var i = 0; i < fromList.length; i++){
+  		toList.add(options[i]); 
+  		selectedOption.selected = false;
+  	}
+}
+
+/*function allToRight(){
+	var rightList = document.getElementById("rightNames");
 	var option = document.createElement("option");
+	var options = document.querySelectorAll("#leftNames option");
 	var selectedOption = rightList.options[rightList.selectedIndex];
-	
-	if (selectedOption == undefined){
-		alert("Choose an option");
-	}
-	else {
-		selectedOption.selected = false;
-    	option.text = selectedOption.text ;
-    	leftList.add(option);
-    	rightList.remove(option);
-		}
-}
 
-function allToRight(){
-var rightList = document.getElementById("rightNames");
-var option = document.createElement("option");
-var options = document.querySelectorAll("#leftNames option");
-var selectedOption = rightList.options[rightList.selectedIndex];
-for (var i = 0; i<options.length; i++){
-  rightList.add(options[i]); 
-  selectedOption.selected = false;
-  }
+	for (var i = 0; i<options.length; i++){
+  		rightList.add(options[i]); 
+  		selectedOption.selected = false;
+  	}
 }
 
 function allToLeft(){
@@ -64,4 +59,4 @@ for (var i = 0; i<options.length; i++){
   leftList.add(options[i]);
   selectedOption.selected = false;  
   }
-}
+}*/
