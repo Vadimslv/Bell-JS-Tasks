@@ -4,7 +4,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 });
 
 function getExp (input) {
-    var input = input.replace(/\s+/g, ''); //Remove spaces 
+    var input = input.replace(/\s+/g, ''); //Remove space 
     if (input[0] == "-") {
         return 0 + input;
     }

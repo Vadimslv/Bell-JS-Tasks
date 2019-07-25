@@ -48,7 +48,6 @@ function toMoveAllElements(fromList, toList){
   		selectedOption.selected = false;
   	}
 }
-
 function allToLeft(){
 var leftList = document.getElementById("leftNames");
 var rightList = document.getElementById("rightNames");

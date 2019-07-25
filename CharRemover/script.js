@@ -15,7 +15,6 @@ function splitMulti(text, delims){
 function getCharsToIgnore (text) {
     var splittedText = splitMulti(text,  ['.', ',', ':', ' ','!',' ?',';']);
     var toIgnore = {}                                                          //Create local tab
-
     for (var i=0, len = splittedText.length; i < len; i++) {
         var word = splittedText[i];
         var charTable = {};
