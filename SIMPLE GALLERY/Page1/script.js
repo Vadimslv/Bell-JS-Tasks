@@ -1,5 +1,5 @@
 document.addEventListener( "DOMContentLoaded", function () {
-window.onload = Start;
+window.onload = Play;
 var nextPage = document.getElementById("forward");
 var prevPage = document.getElementById("back");
 nextPage.onclick = Forward;
@@ -33,6 +33,7 @@ function Countdown() {
     
 function Stop() {
     clearTimeout(time);
+    COUNT = count;
 }
     
 function Play() {

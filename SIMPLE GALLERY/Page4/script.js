@@ -21,7 +21,7 @@ var COUNT = 5; //Set countdown time
 var time, count;
 
 function Start (){  
-    Play();   
+    Play();
 }
 
 function Display() {
@@ -40,6 +40,7 @@ function Countdown() {
     
 function Stop() {
     clearTimeout(time);
+    COUNT = count;
 }
     
 function Play() {
@@ -73,7 +74,7 @@ function closeModalWithoutButton(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-    Repeat();
+    Start();
 }
 
 function closeTab() {
@@ -81,7 +82,9 @@ function closeTab() {
 }
 
 function Repeat() {
-    closeModal();
-    Play();
-    Start();
+    //closeModal();
+//    Play();
+  //  Start();
+    //Stop();
+   window.open("../Page1/index.html","_self");
 }

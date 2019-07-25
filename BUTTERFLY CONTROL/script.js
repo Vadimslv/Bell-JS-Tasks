@@ -33,7 +33,12 @@ function toMoveAllElements(fromList, toList){
 	var selectedOption = fromList.options[fromList.selectedIndex];
 	for (var i = 0; i < fromList.length; i++){
   		toList.add(options[i]); 
-  		selectedOption.selected = false;
+		  selectedOption.selected = false;
+	}
+	
+	for (var i = 0; i < fromList.length; i++) {
+		fromList.remove(fromList.options[i]);
+	
   	}
 }
 

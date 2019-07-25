@@ -33,6 +33,7 @@ function Countdown() {
     
 function Stop() {
     clearTimeout(time);
+    COUNT = count;
 }
     
 function Play() {
